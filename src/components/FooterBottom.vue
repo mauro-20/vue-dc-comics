@@ -1,0 +1,93 @@
+<template>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="col-left">
+        <a href="#">sign-up now!</a>
+      </div>
+      <div class="col-right">
+        <div class="col-right-follow">follow us</div>
+        <ul>
+          <li v-for="(social, index) in socials" :key="index">
+            <img src="../assets/images/footer-facebook.png">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FooterBottom',
+  data() {
+    return {
+      socials: [
+        {
+          logo: '../assets/images/footer-facebook.png',
+          url: '#'
+        },
+        {
+          logo: '../assets/images/footer-twitter.png',
+          url: '#'
+        },
+        {
+          logo: '../assets/images/footer-youtube.png',
+          url: '#'
+        },
+        {
+          logo: '../assets/images/footer-pinterist.png',
+          url: '#'
+        },
+        {
+          logo: '../assets/images/footer-periscope.png',
+          url: '#'
+        },
+      ]
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+  @import '@/assets/style/variables';
+  
+  .footer-bottom{
+    background-color: $footerColor;
+    padding: 3rem;
+  }
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col{
+
+    &-left{
+      a{
+        padding: .875rem;
+        border: .125rem solid $secondaryColor;
+        background-color: $footerColor;
+        color: $lightColor;
+        text-transform: uppercase;
+      }
+    }
+    &-right{
+      display: flex;
+      align-items: center;
+      &-follow{
+        font-weight: 900;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        color: $secondaryColor;
+      }
+      ul{
+        display: flex;
+        li{
+          margin-left: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+</style>
