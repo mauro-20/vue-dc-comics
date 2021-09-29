@@ -3,7 +3,7 @@
     <Header />
     <main>
       <Content/>
-      <Interaction/>
+      <Buy/>
     </main>
     <Footer />
   </div>
@@ -11,7 +11,7 @@
 
 <script>
 import Header from "./components/Header.vue";
-import Interaction from "./components/Interaction.vue";
+import Buy from "./components/Buy.vue";
 import Content from './components/Content.vue';
 import Footer from "./components/Footer.vue";
 
@@ -20,7 +20,7 @@ export default {
   components: {
     Header,
     Content,
-    Interaction,
+    Buy,
     Footer
   },
 };

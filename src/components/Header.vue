@@ -100,13 +100,11 @@ export default {
     
     ul{
       display: flex;
-      list-style: none;
 
       li{
         margin: 0 1.25rem;
       }
       a{
-        text-decoration: none;
         text-transform: uppercase;
         font-weight: 700;
         color: $primaryColor;
