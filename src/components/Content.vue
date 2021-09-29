@@ -10,6 +10,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  @import '@/assets/style/variables';
+  
+  section{
+    color: $lightColor;
+    font-size: 2rem;
+    background-color: $primaryColor;
+    padding: 3rem;
+  }
 
 </style>

@@ -6,14 +6,9 @@
       </div>
       <nav>
         <ul>
-          <li>
-            <a href="#">home</a>
+          <li v-for="(link, index) in menu" :key="index">
+            <a href="link.url" :class="{current: link.current}">{{link.text}}</a>
           </li>
-          <li>
-            <a href="#" class="current">shop</a>
-          </li>
-          <li><a href="#">car</a></li>
-          <li><a href="#">spiderman</a></li>
         </ul>
       </nav>
     </div>
@@ -22,7 +17,63 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data() {
+		return {
+			menu: [
+              {
+                  text: "characters",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "comics",
+                  url: "#",
+                  current: true,
+              },
+              {
+                  text: "movies",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "tv",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "games",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "collectibles",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "videos",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "fans",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "news",
+                  url: "#",
+                  current: false,
+              },
+              {
+                  text: "shop",
+                  url: "#",
+                  current: false,
+              }
+            ],
+		}
+	}
 }
 </script>
 
