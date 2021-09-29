@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    <Header />
+    <Header/>
     <main>
       <Content/>
       <Buy/>
     </main>
-    <Footer />
+    <footer>
+      <FooterTop/>
+
+    </footer>
   </div>
 </template>
 
@@ -13,7 +16,7 @@
 import Header from "./components/Header.vue";
 import Buy from "./components/Buy.vue";
 import Content from './components/Content.vue';
-import Footer from "./components/Footer.vue";
+import FooterTop from "./components/FooterTop.vue";
 
 export default {
   name: "App",
@@ -21,15 +24,12 @@ export default {
     Header,
     Content,
     Buy,
-    Footer
+    FooterTop
   },
 };
 </script>
 
 <style lang="scss">
-@import "@/assets/style/common";
+  @import "@/assets/style/common";
 
-body {
-  background-color: #0ff;
-}
 </style>
