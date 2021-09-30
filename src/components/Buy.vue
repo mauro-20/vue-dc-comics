@@ -1,35 +1,11 @@
 <template>
   <section>
     <div class="container">
-      <div class="item">
+      <div class="item" v-for="(item, index) in items" :key="index">
         <div class="item-img">
-          <img src="@/assets/images/buy-comics-digital-comics.png" alt="digital comics">
+          <img :src="item.src" :alt="item.text">
         </div>
-        <div class="item-text">digital comics</div>
-      </div>
-      <div class="item">
-        <div class="item-img">
-          <img src="@/assets/images/buy-comics-digital-comics.png" alt="digital comics">
-        </div>
-        <div class="item-text">digital comics</div>
-      </div>
-      <div class="item">
-        <div class="item-img">
-          <img src="@/assets/images/buy-comics-digital-comics.png" alt="digital comics">
-        </div>
-        <div class="item-text">digital comics</div>
-      </div>
-      <div class="item">
-        <div class="item-img">
-          <img src="@/assets/images/buy-comics-digital-comics.png" alt="digital comics">
-        </div>
-        <div class="item-text">digital comics</div>
-      </div>
-      <div class="item">
-        <div class="item-img">
-          <img src="@/assets/images/buy-comics-digital-comics.png" alt="digital comics">
-        </div>
-        <div class="item-text">digital comics</div>
+        <div class="item-text">{{item.text}}</div>
       </div>
     </div>
   </section>
@@ -37,7 +13,33 @@
 
 <script>
 export default {
-  name: 'Buy'
+  name: 'Buy',
+  data() {
+    return {
+      items: [
+        {
+          src: require('@/assets/images/buy-comics-digital-comics.png'),
+          text: 'digital comics'
+        },
+        {
+          src: require('@/assets/images/buy-comics-merchandise.png'),
+          text: 'dc merchandise'
+        },
+        {
+          src: require('@/assets/images/buy-comics-subscriptions.png'),
+          text: 'subscription'
+        },
+        {
+          src: require('@/assets/images/buy-comics-shop-locator.png'),
+          text: 'comic shop locator'
+        },
+        {
+          src: require('@/assets/images/buy-dc-power-visa.svg'),
+          text: 'dc power visa'
+        }
+      ]
+    }
+  }
 }
 </script>
 
