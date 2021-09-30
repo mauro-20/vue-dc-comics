@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/style/variables';
+@import '../assets/style/variables';
 
   header{
     background-color: $lightColor;
@@ -109,7 +109,7 @@ export default {
         font-weight: 700;
         color: $primaryColor;
         padding: 3.1875rem 0;
-        border-bottom: .3125rem solid $lightColor;
+        border-bottom: .3125rem solid transparent;
 
         &.current{
           color: $secondaryColor;
