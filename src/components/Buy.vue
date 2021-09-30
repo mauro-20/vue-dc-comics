@@ -57,6 +57,7 @@ export default {
     .item{
       display: flex;
       align-items: center;
+      cursor: pointer;
 
       &-img{
         height: 3.125rem;
