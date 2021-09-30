@@ -1,19 +1,19 @@
 <template>
   <section>
     <div class="container">
-      <div class="card" v-for="(comic, index) in comics" :key="index">
-        <div class="card-image">
-          <img :src="comic.thumb" :alt="comic.series">
-        </div>
-        <div class="card-text">{{ comic.series }}</div>
-      </div>
+      <ComicCard v-for="(comic, index) in comics" :key="index" :comic="comic"/>
     </div>
   </section>
 </template>
 
 <script>
+import ComicCard from './ComicCard.vue'
+
 export default {
   name: "Comics",
+  components: {
+    ComicCard
+  },
   data() {
     return {
       comics: [
@@ -118,39 +118,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    .card {
-      width: calc(100% / 6 - 1.5625rem);
-      margin-bottom: 3rem;
-      cursor: pointer;
-
-      .card-image {
-        position: relative;
-        display: block;
-        margin-bottom: 20px;
-
-        &::before{
-          display: block;
-          content: "";
-          padding-top: 100%;
-        }
-
-        img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: top;
-          top: 0;
-        }
-      }
-
-      &-text {
-        font-size: 1.25rem;
-        color: $lightColor;
-        text-transform: uppercase;
-      }
-    }
   }
 }
 </style>
