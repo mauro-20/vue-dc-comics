@@ -8,7 +8,7 @@
         <div class="col-right-follow">follow us</div>
         <ul>
           <li v-for="(social, index) in socials" :key="index">
-            <img src="../assets/images/footer-facebook.png">
+            <img :src="social.src">
           </li>
         </ul>
       </div>
@@ -23,23 +23,23 @@ export default {
     return {
       socials: [
         {
-          logo: '../assets/images/footer-facebook.png',
+          src: require('../assets/images/footer-facebook.png'),
           url: '#'
         },
         {
-          logo: '../assets/images/footer-twitter.png',
+          src: require('../assets/images/footer-twitter.png'),
           url: '#'
         },
         {
-          logo: '../assets/images/footer-youtube.png',
+          src: require('../assets/images/footer-youtube.png'),
           url: '#'
         },
         {
-          logo: '../assets/images/footer-pinterist.png',
+          src: require('../assets/images/footer-pinterest.png'),
           url: '#'
         },
         {
-          logo: '../assets/images/footer-periscope.png',
+          src: require('../assets/images/footer-periscope.png'),
           url: '#'
         },
       ]
@@ -58,6 +58,7 @@ export default {
   .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .col{
