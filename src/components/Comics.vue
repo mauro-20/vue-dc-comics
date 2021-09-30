@@ -1,8 +1,10 @@
 <template>
   <section>
+    <div class="btn title">current series</div>
     <div class="container">
       <ComicCard v-for="(comic, index) in comics" :key="index" :comic="comic"/>
     </div>
+    <div class="btn more">load more</div>
   </section>
 </template>
 
@@ -111,8 +113,35 @@ export default {
 @import "../assets/style/variables";
 
 section {
+  position: relative;
   background-color: $primaryColor;
   padding: 3rem;
+
+  .btn{
+    display: inline-block;
+    color: $lightColor;
+    background-color: $secondaryColor;
+    text-transform: uppercase;
+    padding: .625rem 1rem;
+    cursor: pointer;
+
+    &.title{
+      position: absolute;
+      top: -1.375rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    &.more{
+      display: block;
+      width: 12.5rem;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  
+
 
   .container {
     display: flex;
