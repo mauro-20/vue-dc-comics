@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/style/variables';
+  @import '../assets/style/variables';
   
   .footer-top{
     background-image: url('../assets/images/footer-bg.jpg');

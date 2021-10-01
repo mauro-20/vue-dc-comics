@@ -18,23 +18,23 @@ export default {
     return {
       items: [
         {
-          src: require('@/assets/images/buy-comics-digital-comics.png'),
+          src: require('../assets/images/buy-comics-digital-comics.png'),
           text: 'digital comics'
         },
         {
-          src: require('@/assets/images/buy-comics-merchandise.png'),
+          src: require('../assets/images/buy-comics-merchandise.png'),
           text: 'dc merchandise'
         },
         {
-          src: require('@/assets/images/buy-comics-subscriptions.png'),
+          src: require('../assets/images/buy-comics-subscriptions.png'),
           text: 'subscription'
         },
         {
-          src: require('@/assets/images/buy-comics-shop-locator.png'),
+          src: require('../assets/images/buy-comics-shop-locator.png'),
           text: 'comic shop locator'
         },
         {
-          src: require('@/assets/images/buy-dc-power-visa.svg'),
+          src: require('../assets/images/buy-dc-power-visa.svg'),
           text: 'dc power visa'
         }
       ]
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/style/variables';
+  @import '../assets/style/variables';
 
   section{
     background-color: $secondaryColor;
