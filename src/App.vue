@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <main>
-      <Hero/>
+      <Hero :src="require('./assets/images/jumbotron.jpg')"/>
       <Comics/>
       <!-- <Content/> -->
       <Buy/>

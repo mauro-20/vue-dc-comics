@@ -1,12 +1,13 @@
 <template>
   <section>
-    <img src="../assets/images/jumbotron.jpg" alt="jumbo">
+    <img :src="src" alt="jumbo">
   </section>
 </template>
 
 <script>
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  props: ['src']
 }
 </script>
 
