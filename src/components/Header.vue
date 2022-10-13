@@ -7,7 +7,7 @@
       <nav>
         <ul>
           <li v-for="(link, index) in menu" :key="index">
-            <a href="link.url" :class="{current: link.current}">{{link.text}}</a>
+            <a :href="link.url" :class="{current: link.current}">{{link.text}}</a>
           </li>
         </ul>
       </nav>
